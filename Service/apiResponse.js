@@ -23,16 +23,14 @@ exports.ErrorResponse = function (res, msg) {
 	return res.status(500).json(data);
 };
 
-// custom by me/////////
 exports.ErrorResponseWithData = function (res, msg, data) {
 	var data = {
 		status: 0,
 		message: msg,
 		data: data
 	};
-	return res.status(200).json(data);
+	return res.status(500).json(data);
 };
-///////////////////////
 
 exports.notFoundResponse = function (res, msg) {
 	var data = {
