@@ -1,0 +1,21 @@
+.dnd-row {
+    border: var(--border);
+    box-shadow: var(--box-shadow-out);
+    border-radius: var(--border-radius);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    line-height: 36px;
+    height: 50px;
+    padding: 6px;
+}
+
+.dnd-row svg {
+    transform: scale(0.8);
+}
+
+.dnd-row div:first-child {
+    border-left: 6px solid;
+    height: 100%;
+    padding-left: 4px;
+}

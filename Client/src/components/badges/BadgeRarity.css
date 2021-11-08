@@ -1,0 +1,24 @@
+.badge-rarity {
+    box-shadow: var(--box-shadow-in);
+    border-radius: var(--border-radius);
+    border: var(--border);
+    font-size: 14px;
+    height: 38px;
+    line-height: 36px;
+    margin-right: 10px;
+    margin-bottom: 6px;
+    padding: 4px 8px;
+}
+
+.badge-rarity span {
+    display: inline-block;
+    margin: 0px 1px;
+}
+
+.badge-rarity__rarity {
+    border-radius: 2px;
+    font-size: 14px;
+    height: 22px;
+    padding: 0px 4px;
+    margin-left: 4px;
+}

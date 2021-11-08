@@ -1,0 +1,72 @@
+.chart-sankey {
+    box-shadow: var(--box-shadow-in);
+    border: var(--border);
+    border-radius: var(--border-radius);
+    padding: 10px 0px;
+    user-select: none;
+    min-width: 600px;
+    overflow: hidden;
+    position: relative;
+}
+
+.chart-sankey__svg {
+    margin: 0 10px;
+    overflow: visible;
+
+}
+
+.chart-sankey .g-nodes__rect {
+    cursor: move;
+}
+
+.chart-sankey .g-links__path {
+    fill: none;
+    mix-blend-mode: multiply;
+}
+
+.chart-sankey .chart__label {
+    font-size: 10px;
+    fill: var(--black);
+    stroke: var(--black);
+    stroke-width: 1;
+    text-transform: uppercase;
+}
+
+.chart-sankey .chart-sankey__tooltip {
+    background-color: var(--white);
+    border-radius: 8px;
+    color: var(--black);
+    display: flex;
+    flex-direction: column;
+    width: auto;
+    white-space: nowrap;
+    padding: 16px;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.chart-sankey .tooltip__name {
+    color: var(--black);
+    margin-right: 6px;
+}
+
+.chart-sankey .tooltip__value {
+    font-weight: 600;
+    flex-wrap: nowrap;
+}
+
+.chart-sankey .chart__label--name {
+    fill: var(--black);
+    stroke: var(--black);
+    stroke-width: 0.5;
+    font-size: 14px;
+    text-transform: uppercase;
+}
+
+.chart-sankey .chart__label--value {
+    fill: var(--black);
+    stroke: var(--black);
+    stroke-width: 0.5;
+    font-size: 12px;
+}

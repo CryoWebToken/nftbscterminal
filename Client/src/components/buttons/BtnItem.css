@@ -1,0 +1,30 @@
+.btn-item {
+    border-bottom: 1px solid var(--lightgray);
+    padding: 10px 20px;
+}
+
+.btn-item:hover {
+    box-shadow: var(--box-shadow-in);
+}
+
+.btn-item__icon {
+    border-radius: var(--border-radius);
+    width: 100px;
+    height: 100px;
+    overflow: hidden;
+}
+
+.btn-item__amount {
+    display: flex;
+    align-items: center;
+}
+
+.btn-item__amount div {
+    margin-left: 6px;
+}
+
+.btn-item__properties {
+    display: flex;
+    flex-wrap: wrap;
+}
+

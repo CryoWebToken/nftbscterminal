@@ -1,0 +1,62 @@
+.btn-rich-list {
+    display: inline-block;
+    position: relative;
+    margin-bottom: 0px;
+}
+
+.btn-rich-list__button {
+    box-shadow: var(--box-shadow-out);
+    border-radius: var(--border-radius);
+    border: var(--border);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: auto;
+    margin: 0;
+    padding: 0px 20px;
+}
+
+.btn-rich-list__button svg {
+    margin-left: 10px;
+}
+
+.btn-rich-list__button.active {
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+}
+
+.btn-rich-list__options {
+    background-color: var(--white);
+    box-shadow: 3px 3px 6px rgba(0,0,0,0.2), -3px 0px 6px rgb(255, 255, 255, 1);;
+    border-radius: var(--border-radius);
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+    border: var(--border);
+    top: 100%;
+    left: 0;
+    position: absolute;
+    padding: 10px;
+    width: 100%;
+    max-height: 300px;
+    overflow-y: scroll;
+    z-index: 2;
+}
+
+.btn-rich-list__options button {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    padding: 10px;
+    text-align: left;
+}
+
+.btn-rich-list__options img {
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    margin-right: 6px;
+}
+
+.btn-rich-list__options button:hover {
+    box-shadow: var(--box-shadow-in);
+}

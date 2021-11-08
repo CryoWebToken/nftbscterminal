@@ -1,0 +1,23 @@
+{
+  "files": {
+    "main.css": "/static/css/main.99f88b18.chunk.css",
+    "main.js": "/static/js/main.7cc16d07.chunk.js",
+    "main.js.map": "/static/js/main.7cc16d07.chunk.js.map",
+    "runtime-main.js": "/static/js/runtime-main.303cfb2b.js",
+    "runtime-main.js.map": "/static/js/runtime-main.303cfb2b.js.map",
+    "static/js/2.47fa7cb9.chunk.js": "/static/js/2.47fa7cb9.chunk.js",
+    "static/js/2.47fa7cb9.chunk.js.map": "/static/js/2.47fa7cb9.chunk.js.map",
+    "static/js/3.9955636c.chunk.js": "/static/js/3.9955636c.chunk.js",
+    "static/js/3.9955636c.chunk.js.map": "/static/js/3.9955636c.chunk.js.map",
+    "index.html": "/index.html",
+    "static/css/main.99f88b18.chunk.css.map": "/static/css/main.99f88b18.chunk.css.map",
+    "static/js/2.47fa7cb9.chunk.js.LICENSE.txt": "/static/js/2.47fa7cb9.chunk.js.LICENSE.txt",
+    "static/media/binance-logo.72e24e3c.webp": "/static/media/binance-logo.72e24e3c.webp"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.303cfb2b.js",
+    "static/js/2.47fa7cb9.chunk.js",
+    "static/css/main.99f88b18.chunk.css",
+    "static/js/main.7cc16d07.chunk.js"
+  ]
+}

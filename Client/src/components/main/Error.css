@@ -1,0 +1,30 @@
+.error {
+    box-shadow: var(--box-shadow-in);
+    border: var(--border);
+    border-radius: var(--border-radius);
+    color: var(--red);
+    line-height: 2;
+    font-size: 16px;
+    margin: 0 auto;
+    margin-top: 100px;
+    max-width: 400px;
+    padding: 20px;
+    text-align: left;
+}
+
+.error div:first-child {
+    border-bottom: 1px solid var(--red);
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.error svg {
+   margin-right: 6px;
+   transform: scale(0.95);
+}
+
+.error span {
+   font-size: 24px;
+   font-weight: 600;
+}

@@ -1,0 +1,23 @@
+.btn-transaction {
+    border-bottom: 1px solid var(--lightgray);
+    height: 76px;
+    padding: 0 20px;
+}
+
+.btn-transaction:last-child {
+    border-bottom: none;
+}
+
+.btn-transaction:hover {
+    box-shadow: var(--box-shadow-in);
+}
+
+.btn-transaction__currency {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.btn-transaction__currency img {
+    margin-right: 4px;
+}

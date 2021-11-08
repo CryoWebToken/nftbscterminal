@@ -1,0 +1,22 @@
+.tab-stats {
+    min-width: 100%;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-gap: 20px;
+}
+
+.tab-stats__charts {
+    min-width: 100%;
+}
+
+.tab-stats__charts-wrapper {
+    display: grid;
+    grid-template-rows: repeat(4, 1fr);
+    grid-gap: 40px;
+}
+
+@media only screen and (min-width: 850px) {
+    .tab-stats {
+        grid-template-columns: 2fr 1fr;
+    }
+}

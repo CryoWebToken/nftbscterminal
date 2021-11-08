@@ -1,0 +1,20 @@
+.info {
+    position: relative;
+}
+
+.info svg {
+    transform: scale(0.7);
+}
+
+.info__message {
+    background-color: var(--white);
+    box-shadow: var(--box-shadow-out);
+    border-radius: var(--border-radius);
+    font-size: 14px;
+    position: absolute;
+    top: 36px;
+    right: 0;
+    width: 240px;
+    padding: 10px;
+    text-align: left;
+}

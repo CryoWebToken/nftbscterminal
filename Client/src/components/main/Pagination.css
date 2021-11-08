@@ -1,0 +1,45 @@
+.pagination {
+    font-size: 12px;
+    height: 56px;
+}
+
+.page {
+    box-shadow: var(--box-shadow-out);
+    border-radius: 50%;
+    cursor: pointer;
+    width: 32px;
+    height: 32px;
+    line-height: 32px;
+    margin: 0px 3px;
+    text-align: center;
+}
+
+.page:hover,
+.page-current {
+    box-shadow: var(--box-shadow-in);
+}
+
+.page-ellipsis {
+    box-shadow: none;
+}
+
+.pagination a,
+.page-previous,
+.page-next {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.page-previous svg,
+.page-next svg {
+    transform: scale(0.8);
+}
+
+.page-previous svg {
+    margin-right: 2px;
+}
+
+.page-next svg {
+    margin-left: 2px;
+}

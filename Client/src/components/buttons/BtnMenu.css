@@ -1,0 +1,15 @@
+.btn-menu {
+    width: 36px;
+    height: 100%;
+    text-align: center;
+}
+
+.btn-menu__icon svg {
+    transform: scale(1.5);
+}
+
+@media only screen and (min-width: 750px) {
+    .btn-menu {
+        display: none;
+    }
+}

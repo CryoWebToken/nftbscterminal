@@ -1,0 +1,49 @@
+.btn-collection {
+    border-bottom: 1px solid var(--lightgray);
+    height: 76px;
+    padding: 0 20px;
+}
+
+.btn-collection:hover {
+    box-shadow: var(--box-shadow-in);
+}
+
+.btn-collection__name__icon {
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+}
+
+.btn-collection__name {
+    display: flex;
+    align-items: center;
+}
+
+.btn-collection__name div {
+    margin-left: 20px;
+    font-size: 18px;
+}
+
+.btn-collection__average,
+.btn-collection__volume,
+.btn-collection__volume_7d {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+.btn-collection__average div,
+.btn-collection__volume div,
+.btn-collection__volume_7d div {
+    margin-left: 4px;
+}
+
+.btn-collection__name div {
+    display: none;
+}
+
+@media only screen and (min-width: 1200px) {
+    .btn-collection__name div {
+        display: block;
+    }
+}

@@ -1,0 +1,83 @@
+form {
+    box-shadow: 4px 4px 8px rgba(0,0,0,0.2), -4px -4px 8px rgb(255, 255, 255, 1);
+    border: var(--border);
+    border-radius: var(--border-radius);
+    margin: 0 auto;
+    width: calc(100% - 20px);
+    padding: 30px 40px;
+    margin-top: 20px;
+}
+
+form h2 {
+    text-align: center;
+}
+
+form label {
+    line-height: 2;
+}
+
+form input {
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+    display: block;
+    height: 44px;
+}
+
+form input::placeholder {
+    font-size: 16px;
+}
+
+form .form-error {
+    color: var(--red);
+    line-height: 2;
+    font-size: 12px;
+    text-align: left;
+}
+
+.form__field {
+    min-height: 90px;
+}
+
+.form__field__input {
+    border: var(--border);
+    border-radius: var(--border-radius);
+    display: flex;
+    align-items: center;
+}
+
+.form__field__input.form-error {
+    border: 1px solid var(--red);
+}
+
+.form__field__input svg {
+    margin: 0 10px;
+    transform: scale(0.9);
+}
+
+.form__field__input.form-error path {
+    stroke: var(--red);
+}
+
+input[type="submit"] {
+    box-shadow: var(--box-shadow-out);
+    border: var(--border);
+    border-radius: var(--border-radius);
+    cursor: pointer;
+    margin-bottom: 10px;
+    margin: 40px 0px 20px 0px;
+    height: 56px;
+    width: 200px;
+    margin-left: 50%;
+    transform: translateX(-50%);
+}
+
+input[type="submit"]:hover {
+    box-shadow: var(--box-shadow-in);
+}
+
+@media only screen and (min-width: 750px) {
+    form {
+        max-width: 600px;
+    }
+}
+

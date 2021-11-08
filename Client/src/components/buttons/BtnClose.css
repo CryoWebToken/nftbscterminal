@@ -1,0 +1,9 @@
+.btn-close__icon {
+    width: 36px;
+    height: 100%;
+    text-align: center;
+}
+
+.btn-close__icon svg {
+    transform: scale(1.5);
+}

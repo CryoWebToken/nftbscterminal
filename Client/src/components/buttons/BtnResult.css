@@ -1,0 +1,19 @@
+.btn-result {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+}
+
+.btn-result img {
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+}
+
+.btn-result div {
+    margin-left: 10px;
+}
+
+.btn-result:hover {
+    box-shadow: var(--box-shadow-in);
+}

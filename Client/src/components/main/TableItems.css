@@ -1,0 +1,16 @@
+.table-list__header div:nth-child(4) span {
+    min-width: 90px;
+}
+
+.legend {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.legend div:first-child {
+    border-radius: 2px;
+    width: 16px;
+    height: 12px;
+    margin-right: 4px;
+}

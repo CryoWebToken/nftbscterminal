@@ -1,0 +1,47 @@
+.input-slider {
+    background-color: var(--white);
+    box-shadow: var(--box-shadow-out);
+    border: var(--border);
+    border-radius: var(--border-radius);
+    margin-bottom: 20px;
+    padding: 10px 20px;
+}
+
+.horizontal-slider {
+    width: 100%;
+    padding: 20px 0px;
+}
+
+.input-slider__track {
+    background-color: var(--black);
+    border-radius: 10px;
+    height: 6px;
+}
+
+.input-slider__track-1 {
+    background-color: var(--white);
+    box-shadow: var(--box-shadow-in);
+}
+
+.input-slider__thumb {
+    background-color: var(--white);
+    border: var(--border);
+    box-shadow: var(--box-shadow-out);
+    border-radius: 10px;
+    cursor: grab;
+    font-size: 12px;
+    width: 40px;
+    height: 25px;
+    line-height: 25px;
+    outline: none;
+    text-align: center;
+    transform: translateY(calc(-50% + 3px));
+}
+
+
+.input-slider__thumb-active {
+    width: 50px;
+    height: 30px;
+    line-height: 30px;
+    font-size: 14px;
+}

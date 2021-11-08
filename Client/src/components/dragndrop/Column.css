@@ -1,0 +1,8 @@
+.dnd-column {
+    margin-bottom: 20px;
+}
+
+.dnd-column__rows {
+    display: grid;
+    grid-gap: 16px;
+}

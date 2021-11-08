@@ -1,0 +1,16 @@
+.btn-rank-sort {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    height: 56px;
+    text-align: left;
+}
+
+.btn-rank-sort:nth-child(1),
+.btn-rank-sort:nth-child(2) {
+    justify-content: flex-start;
+}
+
+.btn-rank-sort svg {
+    margin-left: 4px;
+}
