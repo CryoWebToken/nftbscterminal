@@ -3,6 +3,7 @@ import Logo from "./Logo";
 import BtnMenu from "../buttons/BtnMenu";
 import NavLinks from "./NavLinks";
 import SearchBar from "./SearchBar";
+import BtnWallet from "../buttons/BtnWallet";
 
 export default function Navbar({ 
     filteredSearchList,
@@ -12,15 +13,25 @@ export default function Navbar({
     closeModalSearch,
     openModalSearch,
     closeModalMenu,
-    openModalMenu
+    openModalMenu,
+    openModalConnect,
+    handleLogout,
+    address
 }) {
     return (
         <nav className="navbar global-width">
-            <Logo />
-            <NavLinks
-                className="navbar__links"
-                closeModalMenu={closeModalMenu}
-            />
+                <Logo />
+            <div className="navbar__left">
+                <NavLinks
+                    className="navbar__links"
+                    closeModalMenu={closeModalMenu}
+                />
+                <BtnWallet
+                    address={address}
+                    openModalConnect={openModalConnect}
+                    handleLogout={handleLogout}
+                />
+            </div>
             <div className="center">
                 <SearchBar
                     filteredSearchList={filteredSearchList}

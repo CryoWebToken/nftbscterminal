@@ -1,5 +1,21 @@
 import axios from "axios";
 
+export const getNFTData = async (address) => {
+    try {
+        const response = await axios.get(`/api/profile?address=${address}`);
+        const data = response.data;
+        
+        if(data["status"]) {
+            return data["data"];
+        } else {
+            throw Error(data["message"]);
+        }
+    } catch (err) {
+        console.log(err)
+        throw new Error(err.message);
+    }
+}
+
 export const getNewCollections = async () => {
     try {
         const response = await axios.get(`/api/newCollections`);

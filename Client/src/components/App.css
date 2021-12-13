@@ -217,6 +217,17 @@ li {
     text-align: center;
 }
 
+.grid--nfts {
+    display: grid;
+    align-items: flex-start;
+    justify-items: center;
+    display: grid;
+    grid-gap: 30px;
+    grid-template-columns: repeat(auto-fit, minmax(266px, 1fr));
+    min-width: 100%;
+    padding: 20px;
+}
+
 .breadcrum {
     font-size: 14px;
     height: 20px;
@@ -229,6 +240,10 @@ li {
 .dnd-wrappper {
     overflow-x: scroll;
     padding: 10px;
+}
+
+.nfts-wrapper h1 {
+    padding: 0 10px;
 }
 
 .rich-wrapper p {
