@@ -14,7 +14,7 @@
 
 Project link: https://nftonbsc.com/<br>
 Public repo: https://github.com/SamixDev/NFT-on-BSC<br>
-Recorded video demo of Unstoppable Domains Login integration: [insert here]<br>
+Recorded video demo of Unstoppable Domains Login integration: https://youtu.be/WmzRVQKOJzc<br>
 Person of contact: <br>- Discord ID: **GodSamix#6189**<br> - Email address: samer.hd.ah@gmail.com<br>
 
 ## Setup
