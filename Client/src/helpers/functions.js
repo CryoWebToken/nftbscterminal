@@ -30,8 +30,13 @@ export const intlDateFormat = function (date, locale = "en-US") {
 }
 
 export const trimAddress = address => {
-    if(!address) return "";
-    return `${address.slice(0, 4)}...${address.slice(-4)}`;
+    const checkUD = address.split("").indexOf(".");
+
+    if(checkUD !== -1) {
+        return address;
+    } else {
+        return `${address.slice(0, 4)}...${address.slice(-4)}`;
+    }
 }
 
 export const sortByName = (a, b, name) => {

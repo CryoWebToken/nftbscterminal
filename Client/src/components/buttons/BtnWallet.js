@@ -4,8 +4,14 @@ import { trimAddress } from "../../helpers/functions";
 import BtnLogout from "./BtnLogout";
 import ArrowDown from "../icons/ArrowDown";
 import ArrowUp from "../icons/ArrowUp";
+import udLogo from "../../assets/ud-logo.png";
 
-export default function BtnWallet({ address, openModalConnect, handleLogout }) {
+export default function BtnWallet({
+    user,
+    address,
+    openModalConnect,
+    handleLogout
+}) {
     const [showButton, setShowButton] = useState(false);
 
     const handleOnMouseEnter = () => {
@@ -40,7 +46,11 @@ export default function BtnWallet({ address, openModalConnect, handleLogout }) {
                 address && 
                 <>
                 <button className="wallet-btn__address">
-                    {trimAddress(address)}
+                    {
+                        user.split("").indexOf(".") !== -1 &&
+                        <img src={udLogo} alt=""></img>
+                    }
+                    {trimAddress(user)}
                     {
                         !showButton &&
                         <ArrowDown color="var(--purple)" />

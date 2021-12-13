@@ -15,7 +15,7 @@ export default function SearchBar({
     return (
         <div className={`search-bar ${showSuggestions ? "active" : ""}`}>
             <input
-                className="search-bar__input"
+                className="input search-bar__input"
                 onChange={e => setSearchValue(e.target.value)}
                 onClick={() => openModalSearch()}
                 value={searchValue}

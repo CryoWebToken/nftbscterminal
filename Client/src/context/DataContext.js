@@ -7,12 +7,21 @@ import {
 } from "../api";
 import { PAGE_LIMIT } from "../helpers/constants";
 import { sortByName } from "../helpers/functions";
+import UAuth from "@uauth/js";
+
+const uauth = new UAuth({
+    clientID: process.env.REACT_APP_UD_CLIENT_ID,
+    clientSecret: process.env.REACT_APP_UD_CLIENT_SECRET,
+    scope: process.env.REACT_APP_UD_SCOPE,
+    redirectUri: process.env.REACT_APP_UD_REDIRECT_URI,
+});
 
 export const DataContext = React.createContext();
 DataContext.displayName = "DataProvider";
 
 export default function DataProvider({ children }) {
     // ~~~ Auth details ~~~
+    const [user, setUser] = useState(null);
     const [address, setAddress] = useState(null);
     // ~~~ Modals ~~~
     const [showModalSearch, setShowModalSearch] = useState(false);
@@ -199,25 +208,45 @@ export default function DataProvider({ children }) {
         }
     }, [searchValue, showSuggestions]);
 
-    const handleLogin = async () => {
-        if (window.ethereum) {
-            try {
-                const res = await window.ethereum.request({
-                    method: 'eth_requestAccounts',
-                });
-                setAddress(res[0]);
-                closeModalConnect();
-            } catch (error) {
-                alert("Something went wrong. Please try again!");
+    const handleLogin = async (value) => {
+        if(value === "ud") {
+            uauth
+                .loginWithPopup()
+                .then(res => {
+                    setUser(res.idToken.sub);
+                    setAddress(res.idToken.wallet_address);
+                    closeModalConnect();
+                })
+                .catch(err => console.error(err.message));
+        }
+
+        if(value === "mm") {
+            if (window.ethereum) {
+                try {
+                    const res = await window.ethereum.request({
+                        method: 'eth_requestAccounts',
+                    });
+                    setUser(res[0]);
+                    setAddress(res[0]);
+                    closeModalConnect();
+                } catch (error) {
+                    alert("Something went wrong. Please try again!");
+                }
+            } else {
+                alert("Please install the MetaMask extension!");
             }
-        } else {
-            alert("Please install the MetaMask extension!");
         }
     }
 
-    const handleLogout = () => {
-        setAddress(null);
-        closeModalConnect();
+    const handleLogout = async () => {
+        uauth
+        .logout()
+        .catch(err => console.error(err.message))
+        .finally(() => {
+            setAddress(null);
+            setUser(null);
+            closeModalConnect();
+        });
     }
 
     const closeModalSearch = () => {
@@ -250,6 +279,7 @@ export default function DataProvider({ children }) {
             value={{
                 state: state,
                 address: address,
+                user: user,
                 showSuggestions: showSuggestions,
                 showModalSearch: showModalSearch,
                 showModalMenu: showModalMenu,

@@ -15,14 +15,19 @@
     box-shadow: var(--box-shadow-out);
     margin: 0 auto;
     margin-top: 160px;
-    max-width: 400px;
+    max-width: 420px;
     padding: 20px;
-    padding-bottom: 70px;
+    padding-bottom: 44px;
     text-align: right;
+}
+
+.modal__connect__wrapper h3 {
+    font-weight: 600;
+    text-align: left;
+    margin-bottom: 20px;
 }
 
 .modal__connect__wrapper--close {
     font-size: 24px;
     text-align: right;
-    margin-bottom: 20px;
 }
