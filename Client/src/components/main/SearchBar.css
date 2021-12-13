@@ -1,4 +1,5 @@
 .search-bar {
+    background-color: var(--white);
     border: var(--border);
     border-radius: 8px;
     position: absolute;
@@ -52,17 +53,11 @@
     padding: 10px 20px;
 }
 
-@media only screen and (min-width: 750px) {
+@media only screen and (min-width: 992px) {
     .search-bar {
         display: flex;
         align-items: center;
-        max-width: 240px;
-        top: 26.5px;
-    }
-}
-
-@media only screen and (min-width: 850px) {
-    .search-bar {
         max-width: 300px;
+        top: 26.5px;
     }
 }

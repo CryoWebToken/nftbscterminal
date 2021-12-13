@@ -1,5 +1,10 @@
 import React, { useState, useEffect } from "react";
-import { getSearchList, getNewCollections, getCollectionsData } from "../api";
+import {
+    getSearchList,
+    getNewCollections,
+    getCollectionsData,
+    getNFTData
+} from "../api";
 import { PAGE_LIMIT } from "../helpers/constants";
 import { sortByName } from "../helpers/functions";
 
@@ -7,10 +12,13 @@ export const DataContext = React.createContext();
 DataContext.displayName = "DataProvider";
 
 export default function DataProvider({ children }) {
+    // ~~~ Auth details ~~~
+    const [address, setAddress] = useState(null);
     // ~~~ Modals ~~~
     const [showModalSearch, setShowModalSearch] = useState(false);
     const [showModalMenu, setShowModalMenu] = useState(false);
     const [showSuggestions, setShowSuggestions] = useState(false);
+    const [showModalConnect, setShowModalNfts] = useState(false);
     // ~~~ Params for calling  APIs ~~~
     const [totalPageCount, setTotalPageCount] = useState(0);
     const [currPage, setCurrPage] = useState(1);
@@ -32,6 +40,12 @@ export default function DataProvider({ children }) {
     const [state, setState] = useState({
         loading: true,
         error: ""
+    });
+    // ~~~ Keeping tabs on loading, error and success ~~~
+    const [stateNfts, setStateNfts] = useState({
+        data: [],
+        loading: false,
+        error: "",
     });
 
     // ~~~ API calls ~~~
@@ -90,6 +104,40 @@ export default function DataProvider({ children }) {
             mounted = false;
         }
     }, []);
+
+    // ~~~ Fetching data for NFTs page ~~~
+    useEffect(() => {
+        if(!address) return;
+
+        let mounted = true;
+        (async () => {
+            if (mounted) {
+                try {
+                    const response = await getNFTData(address);
+                    setStateNfts({
+                        data: response,
+                        loading: false,
+                        error: ""
+                    });
+                } catch (err) {
+                    setStateNfts({
+                        data: [],
+                        loading: false,
+                        error: err.message
+                    });
+                }
+            }
+        })();
+
+        return () => {
+            mounted = false;
+            setStateNfts({
+                data: [],
+                loading: true,
+                error: ""
+            });
+        }
+    }, [address]);
 
     // ~~~ Update items data on pagination change ~~~
     useEffect(() => {
@@ -151,6 +199,27 @@ export default function DataProvider({ children }) {
         }
     }, [searchValue, showSuggestions]);
 
+    const handleLogin = async () => {
+        if (window.ethereum) {
+            try {
+                const res = await window.ethereum.request({
+                    method: 'eth_requestAccounts',
+                });
+                setAddress(res[0]);
+                closeModalConnect();
+            } catch (error) {
+                alert("Something went wrong. Please try again!");
+            }
+        } else {
+            alert("Please install the MetaMask extension!");
+        }
+    }
+
+    const handleLogout = () => {
+        setAddress(null);
+        closeModalConnect();
+    }
+
     const closeModalSearch = () => {
         setShowSuggestions(false);
         setSearchValue("");
@@ -168,13 +237,23 @@ export default function DataProvider({ children }) {
         setShowModalMenu(true);
     }
 
+    const closeModalConnect = () => {
+        setShowModalNfts(false);
+    }
+
+    const openModalConnect = () => {
+        setShowModalNfts(true);
+    }
+
     return (
         <DataContext.Provider
             value={{
                 state: state,
+                address: address,
                 showSuggestions: showSuggestions,
                 showModalSearch: showModalSearch,
                 showModalMenu: showModalMenu,
+                showModalConnect: showModalConnect,
                 searchValue: searchValue,
                 rankSortBy: rankSortBy,
                 totalPageCount: totalPageCount,
@@ -184,13 +263,18 @@ export default function DataProvider({ children }) {
                 searchList: searchList,
                 filteredSearchList: filteredSearchList,
                 sortedCollectionsData: sortedCollectionsData,
+                stateNfts: stateNfts,
                 setSearchValue: setSearchValue,
                 setRankSortBy: setRankSortBy,
                 setCurrPage: setCurrPage,
                 openModalSearch: openModalSearch,
                 closeModalSearch: closeModalSearch,
                 openModalMenu: openModalMenu,
-                closeModalMenu: closeModalMenu
+                closeModalMenu: closeModalMenu,
+                openModalConnect: openModalConnect,
+                closeModalConnect: closeModalConnect,
+                handleLogin: handleLogin,
+                handleLogout: handleLogout
             }}
         >
             {children}

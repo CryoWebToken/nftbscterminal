@@ -14,6 +14,11 @@ export const ROUTES = [
         path: "/list",
         label: "List project"
     },
+    {
+        id: 3,
+        path: "/nfts",
+        label: "My NFTs"
+    },
 ];
 
 export const DEBOUNCE_DELAY = 100;
@@ -207,3 +212,5 @@ export const INITIAL_ITEMS_SORT_BY = [
         column: "created"
     },
 ];
+
+export const NFTRADE_URL_ADDRESS = "https://nftrade.com/assets/bsc";

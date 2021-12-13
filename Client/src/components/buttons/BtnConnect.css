@@ -1,0 +1,21 @@
+.btn-connect {
+    background-color: var(--white);
+    border: var(--border);
+    border-radius: var(--border-radius);
+    box-shadow: var(--box-shadow-out);
+    display: flex;
+    align-items: center;
+    font-size: 18px;
+    width: 100%;
+    padding: 10px 20px;
+}
+
+.btn-connect img {
+    width: 40px;
+    height: 40px;
+    margin-right: 20px;
+}
+
+.btn-connect:hover {
+    box-shadow: var(--box-shadow-in);
+}

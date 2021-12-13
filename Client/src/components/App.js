@@ -5,6 +5,7 @@ import Header from "./main/Header";
 import Home from "./pages/Home";
 import List from "./pages/List";
 import Rich from "./pages/Rich";
+import Nfts from "./pages/Nfts";
 import Collection from "./pages/Collection";
 import Item from "./pages/Item";
 
@@ -31,6 +32,12 @@ function App() {
                             path="/rich"
                             component={Rich}
                             label="Rich List"
+                            exact
+                        />
+                        <Route
+                            path="/nfts"
+                            component={Nfts}
+                            label="Nfts"
                             exact
                         />
                         <Route
