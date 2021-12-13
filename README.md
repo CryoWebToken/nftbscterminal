@@ -23,6 +23,7 @@ Prerequisites needed:
   - [Node 12 or better](https://nodejs.org/en/)
   - [Covalent API key](https://www.covalenthq.com/platform/#/auth/register/)
   - [MySQL server](https://dev.mysql.com/downloads/installer/)
+  - [Unstoppable Domains credentials](https://unstoppabledomains.com/apps)
 
 Steps to set the Backend running:
 1. set your DB user and password in .env (DB_USER, DB_PASS);
@@ -37,7 +38,7 @@ Steps to set the Client running:<br>
 3) install the Node dependencies by running $ yarn start in the terminal;
 4) insert in the package.json file the following key value pair, right above "dependencies": "proxy": "http://localhost:8080" and save the changes;
 5) open a new terminal and run the command $ yarn start (make sure you are in the right directory);
-6) fill in the ```.env``` with the Unstoppable Domains credentials.
+6) set in the ```.env``` the Unstoppable Domains credentials.
 
 ## Workflow
 
@@ -46,7 +47,7 @@ Steps to set the Client running:<br>
 3. Creating algorithms for stats and charts and schedule updater for the DB data.
 4. Creating APIs for the frontend.
 5. Fetching the stats from the backend.
-6. filling the charts and stats with data fetched.
+6. Computing charts and stats with data fetched.
 
 ## Design
 
