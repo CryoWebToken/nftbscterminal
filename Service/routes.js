@@ -20,6 +20,8 @@ const { checkCollection,
     addcoll } = require("./apiQuery");
 
 
+const { getNfts } = require("./apiMoralis");
+
 // health check
 router.get('/healthcheck', async (req, res) => {
     const data = {
@@ -235,6 +237,20 @@ router.get('/collectionOwners', async (req, res) => {
     collectionOwners(address).then(price => {
         try {
             apiResponse.successResponseWithData(res, 'OK', price);
+        } catch (e) {
+            apiResponse.ErrorResponse(res, e);
+        }
+    }).catch(err => {
+        apiResponse.ErrorResponse(res, err);
+    });
+});
+
+// profile nfts on bsc
+router.get('/profile', async (req, res) => {
+    let address = req.query.address;
+    getNfts(address).then(nfts => {
+        try {
+            apiResponse.successResponseWithData(res, 'Found Data', nfts);
         } catch (e) {
             apiResponse.ErrorResponse(res, e);
         }

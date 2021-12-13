@@ -43,6 +43,11 @@ app.listen(port, () => {
     console.log('Server started! At http://localhost:' + port);
 });
 
+// init Moralis server
+const { initMoralis } = require("./Service/moralis_init");
+initMoralis();
+
+
 // main code
 (async function main() {
 
