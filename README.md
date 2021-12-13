@@ -3,12 +3,19 @@
 [NFT on BSC](https://nftonbsc.com) is an analytics web app that make great use of NFT data sources on Binance Smart Chain (BSC) for analytics and appraisals.
 
 ## Features
+- **Login** (Login using Unstoppable Domains or Metamask)
 - **Home** (Collections ranked based on volume with their stats and a latest added collections tab)
 - **Collection stats** (Detailed stats and charts of a collection showing historical values of volume, fees, sales, mints, owners and average price)
 - **Collection NFT List** (A collection's NFT list with user sorting & filtering capability and rarity preview)
 - **NFT Details** (Details and metadata of a single NFT with a list of it's transactions)
 - **Rich List** (Sankey diagram displaying the flow of current owners)
+- **My NFTs** (View the user's NFTs)
 - **List Project** (Application form to request adding a new collection to the web app)
+
+Project link: https://nftonbsc.com/<br>
+Public repo: https://github.com/SamixDev/NFT-on-BSC<br>
+Recorded video demo of Unstoppable Domains Login integration: [insert here]<br>
+Person of contact: <br>- Discord ID: **GodSamix#6189**<br> - Email address: samer.hd.ah@gmail.com<br>
 
 ## Setup
 
