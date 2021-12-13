@@ -1,6 +1,6 @@
 # NFT on BSC
 
-[NFT on BSC](https://nftonbsc.com) is an analytics web app that make great use of NFT data sources on Binance Smart Chain (BSC) for analytics and appraisals.
+[NFT on BSC](https://nftonbsc.com) is an analytics web app that makes great use of NFT data sources on Binance Smart Chain (BSC) for analytics and appraisals.
 
 ## Features
 - **Login** (Login using Unstoppable Domains or Metamask)
