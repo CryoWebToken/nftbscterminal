@@ -25,11 +25,11 @@ Prerequisites needed:
   - [MySQL server](https://dev.mysql.com/downloads/installer/)
 
 Steps to set the Backend running:
-1. Set your DB user and password in .env (DB_USER, DB_PASS);
-2. Set Covalent api key in .env (COV_API);
+1. set your DB user and password in .env (DB_USER, DB_PASS);
+2. set Covalent api key in .env (COV_API);
 3. install npm dependencies;
 4. run the project with the command $ npm start;
-5. Database and tables creation is automatic, leave it for a while to fetch & update the NFTs and stats.
+5. database and tables creation is automatic, leave it for a while to fetch & update the NFTs and stats.
 
 Steps to set the Client running:<br>
 1) move the client folder in the same directory as the server folder;
@@ -37,6 +37,7 @@ Steps to set the Client running:<br>
 3) install the Node dependencies by running $ yarn start in the terminal;
 4) insert in the package.json file the following key value pair, right above "dependencies": "proxy": "http://localhost:8080" and save the changes;
 5) open a new terminal and run the command $ yarn start (make sure you are in the right directory);
+6) fill in the ```.env``` with the Unstoppable Domains credentials.
 
 ## Workflow
 
