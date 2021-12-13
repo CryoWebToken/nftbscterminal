@@ -83,7 +83,7 @@ h4 {
     line-height: 2.5;
 }
 
-input {
+.input {
     background-color: transparent;
     border-radius: var(--border-radius);
     border: none;
@@ -97,7 +97,7 @@ input {
     padding: 10px 12px;
 }
 
-input::placeholder {
+.input::placeholder {
     color: #CACCCF;
     text-align: left;
 }

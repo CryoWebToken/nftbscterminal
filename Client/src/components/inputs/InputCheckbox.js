@@ -64,6 +64,7 @@ export default function InputCheckbox({
                                 className="input-checkbox__label"
                             >{elem.property}
                                 <input
+                                    className="input"
                                     type="checkbox"
                                     onChange={handleOnChange}
                                     id={elem.id}

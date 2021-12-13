@@ -41,13 +41,14 @@ export default function Form({ setState }) {
     }
  
     return (
-        <form onSubmit={handleSubmit(onSubmit)}>
+        <form className="form" onSubmit={handleSubmit(onSubmit)}>
             <h2>List your project</h2>
             <div className="form__field">
                 <label>Email*</label>
                 <div className={`form__field__input ${errors.email ? "form-error" : ""}`}>
                     <Mail />
                     <input
+                        className="input"
                         type="text"
                         autoComplete="off"
                         placeholder="example@gmail.com"
@@ -62,6 +63,7 @@ export default function Form({ setState }) {
                 <div className={`form__field__input ${errors.projectName ? "form-error" : ""}`}>
                     <User />
                     <input
+                        className="input"
                         type="text"
                         autoComplete="off"
                         placeholder="Catchy Name"
@@ -76,6 +78,7 @@ export default function Form({ setState }) {
                     <div className={`form__field__input ${errors.shortDesc ? "form-error" : ""}`}>
                     <Pen />
                     <input
+                        className="input"
                         type="text"
                         autoComplete="off"
                         placeholder="Short and sweet."
@@ -90,6 +93,7 @@ export default function Form({ setState }) {
                 <div className={`form__field__input ${errors.projectAddress ? "form-error" : ""}`}>
                     <Box />
                     <input
+                        className="input"
                         type="text"
                         autoComplete="off"
                         placeholder="0x0000000000000000000000000000000000000000"
@@ -104,6 +108,7 @@ export default function Form({ setState }) {
                 <div className={`form__field__input ${errors.icon ? "form-error" : ""}`}>
                     <Image />
                     <input
+                        className="input"
                         type="text"
                         autoComplete="off"
                         placeholder="https://static-image/avatar.png"
@@ -117,6 +122,7 @@ export default function Form({ setState }) {
                 <div className={`form__field__input ${errors.banner ? "form-error" : ""}`}>
                     <Image />
                     <input
+                        className="input"
                         type="text"
                         autoComplete="off"
                         placeholder="https://static-image/banner.png"
@@ -130,6 +136,7 @@ export default function Form({ setState }) {
                 <div className={`form__field__input ${errors.projectUrl ? "form-error" : ""}`}>
                     <Link />
                     <input
+                        className="input"
                         type="text"
                         autoComplete="off"
                         placeholder="https://website.com/"
@@ -143,6 +150,7 @@ export default function Form({ setState }) {
                     <div className={`form__field__input ${errors.projectTwitter ? "form-error" : ""}`}>
                     <Twitter />
                     <input
+                        className="input"
                         type="text"
                         autoComplete="off"
                         placeholder="IAmHandle"
@@ -156,6 +164,7 @@ export default function Form({ setState }) {
                     <div className={`form__field__input ${errors.projectDiscord ? "form-error" : ""}`}>
                     <Discord />
                     <input
+                        className="input"
                         type="text"
                         autoComplete="off"
                         placeholder="https://discord.gg/aBcDeFgHi"
@@ -164,7 +173,7 @@ export default function Form({ setState }) {
                 </div>
                 {errors.projectDiscord && <p className="form-error"></p>}
             </div>
-            <input type="submit" />
+            <input className="input" type="submit" />
       </form>
     );
 }

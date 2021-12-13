@@ -22,6 +22,7 @@ export default function Header() {
                 openModalConnect={dataContext.openModalConnect}
                 handleLogout={dataContext.handleLogout}
                 address={dataContext.address}
+                user={dataContext.user}
             />
             <ModalSearch
                 showModalSearch={dataContext.showModalSearch}

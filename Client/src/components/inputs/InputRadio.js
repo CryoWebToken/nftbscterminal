@@ -27,6 +27,7 @@ export default function InputRadio({
                 className="input-radio__label"
             >{label}
                 <input
+                    className="input"
                     id={id}
                     checked={checked}
                     type="radio"

@@ -16,7 +16,8 @@ export default function Navbar({
     openModalMenu,
     openModalConnect,
     handleLogout,
-    address
+    address,
+    user
 }) {
     return (
         <nav className="navbar global-width">
@@ -27,6 +28,7 @@ export default function Navbar({
                     closeModalMenu={closeModalMenu}
                 />
                 <BtnWallet
+                    user={user}
                     address={address}
                     openModalConnect={openModalConnect}
                     handleLogout={handleLogout}
